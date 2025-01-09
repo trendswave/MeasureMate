@@ -57,3 +57,26 @@ SPREADSHEET_ID=your_google_sheet_id
 SHEET_NAME=Sheet1
 EMAIL_USER=your_email@example.com
 EMAIL_PASS=your_email_password
+
+5. Start the backend server:
+
+cd client
+npm start
+
+# Usage
+1. Open your browser and navigate to http://localhost:3000.
+2. Register a new user or log in with existing credentials.
+3. Add, edit, and view measurements.
+4. Use the query feature to ask fashion-related questions.
+
+# API Endpoints
+- User Registration: POST /api/register
+- User Login: POST /api/login
+- User Profile: GET /api/profile
+- Edit Profile: PUT /api/profile
+- Add Measurement: POST /api/measurements
+- Edit Measurement: PUT /api/measurements/:id
+- View Measurement: GET /api/measurements/:id
+- View Query History: GET /api/queries
+- Superuser Create: POST /api/superuser/create
+- Superuser Dashboard: GET /api/superuser/dashboard
