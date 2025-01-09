@@ -31,3 +31,29 @@ MeasureMate is a comprehensive solution for managing body measurements and inter
    ```sh
    git clone https://github.com/yourusername/measuremate.git
    cd measuremate
+
+2. Install backend dependencies:
+
+npm install
+
+3. Install frontend dependencies:
+
+cd client
+npm install
+
+4. Set up environment variables:
+
+Create a .env file in the root directory and add the following:
+
+
+PORT=5000
+DATABASE_HOST=localhost
+DATABASE_USER=your_db_user
+DATABASE_PASSWORD=your_db_password
+DATABASE_NAME=measuremate_db
+JWT_SECRET=your_jwt_secret
+GOOGLE_API_KEY_FILE=path_to_your_google_api_key_file
+SPREADSHEET_ID=your_google_sheet_id
+SHEET_NAME=Sheet1
+EMAIL_USER=your_email@example.com
+EMAIL_PASS=your_email_password
