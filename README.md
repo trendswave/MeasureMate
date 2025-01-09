@@ -22,7 +22,7 @@ MeasureMate is a comprehensive solution for managing body measurements and inter
 - Send generated responses to WhatsApp
 
 ## Technologies Used
-- **Backend**: Node.js, Express.js, PostgreSQL, Google Sheets API, OpenAI API
+- **Backend**: Node.js, Express.js, MySQL, Google Sheets API, OpenAI API
 - **Frontend**: React, Axios, React Router
 - **Authentication**: bcryptjs, jsonwebtoken
 
