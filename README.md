@@ -29,7 +29,7 @@ MeasureMate is a comprehensive solution for managing body measurements and inter
 ## Installation
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/measuremate.git
+   git clone https://github.com/trendswave/measuremate.git
    cd measuremate
 
 2. Install backend dependencies:
@@ -184,4 +184,3 @@ By following this structure, you can provide a comprehensive and clear README fi
     - Information about the project's license.
 
 By following this structure, you can provide a comprehensive and clear README file for your MeasureMate project. If you need further assistance with any specific part of the README or the project, please let me know.
-
