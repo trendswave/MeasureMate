@@ -83,27 +83,27 @@ npm start
 
 # Project Structure
 
-measuremate/
-├── client/                 # Frontend code (React)
-│   ├── public/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── App.js
-│   │   ├── index.js
-│   │   └── ...
-│   ├── package.json
-│   └── ...
-├── server/                 # Backend code (Node.js, Express)
-│   ├── Config
-│   ├── ...
-│   ├── .env
-│   ├── index.js
-│   ├── server.js
-│   ├── package.json
-│   └── gitignore
-│   ├──LINCENSE
-│   └──...  
-├── README.md
+- measuremate/
+- ├── client/                 # Frontend code - - (React)
+- │   ├── public/
+- │   ├── src/
+- │   │   ├── components/
+- │   │   ├── App.js
+- │   │   ├── index.js
+- │   │   └── ...
+- │   ├── package.json
+- │   └── ...
+- ├── server/                 # Backend code (Node.js, Express)
+- │   ├── Config
+- │   ├── ...
+- │   ├── .env
+- │   ├── index.js
+- │   ├── server.js
+- │   ├── package.json
+- │   └── gitignore
+- │   ├──LINCENSE
+- │   └──...  
+- ├── README.md
 
 
 # Contributing
