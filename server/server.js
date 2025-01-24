@@ -143,3 +143,16 @@ app.get('/api/profile', authenticate, async (req, res) => {
     res.status(500).json({ error: 'Error retrieving profile' });
   }
 });
+
+
+// API endpoint to retrieve user measurements
+app.get('/api/measurements', authenticate, async (req, res) => {
+  try {
+    const [rows] = await pool.query('SELECT * FROM measurements WHERE user_id = ?', [req.user.id]);
+    res.status(200).json(rows);
+  } catch (error) {
+    console.error('Error retrieving measurements:', error);
+    res.status(500).json({ error: 'Error retrieving measurements' });
+  }
+});
+
