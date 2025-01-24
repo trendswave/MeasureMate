@@ -109,3 +109,6 @@ const updateRequest = {
   }
 }
 
+// Middleware to authenticate requests
+const authenticate = (req, res, next) => {
+  
