@@ -127,3 +127,19 @@ const authenticate = (req, res, next) => {
     return res.status(401).json({ message: 'Invalid token' });
   }
 };
+
+
+// API endpoint to retrieve user profile
+app.get('/api/profile', authenticate, async (req, res) => {
+  try {
+    const [rows] = await pool.query('SELECT username, email, profile_picture FROM users WHERE id = ?', [req.user.id]);
+    if (rows.length > 0) {
+      res.status(200).json(rows[0]);
+    } else {
+      res.status(404).json({ message: 'User not found' });
+    }
+  } catch (error) {
+    console.error('Error retrieving profile:', error);
+    res.status(500).json({ error: 'Error retrieving profile' });
+  }
+});
