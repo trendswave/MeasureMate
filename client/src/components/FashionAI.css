@@ -1,0 +1,27 @@
+.fashion-ai-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.fashion-ai-container h1,
+.fashion-ai-container h2 {
+    color: #333;
+}
+
+.fashion-ai-container p,
+.fashion-ai-container ul {
+    color: #555;
+}
+
+.fashion-ai-container ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.fashion-ai-container ul li {
+    margin-bottom: 10px;
+}
