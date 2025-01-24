@@ -54,3 +54,23 @@ const auth = new google.auth.GoogleAuth({
 });
 
 const sheets = google.sheets({ version: 'v4', auth });
+
+async function appendToGoogleSheet(data) {
+  const authClient = await auth.getClient();
+  const request = {
+    spreadsheetId: SPREADSHEET_ID,
+    range: 'sheet1!A2:Z',
+    valueInputOption: 'USER_ENTERED',
+    resource: {
+      values: [data],
+    },
+    auth: authClient,
+  };
+  try {
+    await sheets.spreadsheets.values.append(request);
+    console.log('Data appended to Google Sheet');
+  } catch (error) {
+    console.error('Error appending data to Google Sheet:', error);
+  }
+}
+
