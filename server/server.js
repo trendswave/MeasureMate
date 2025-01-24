@@ -40,3 +40,17 @@ const storage = multer.diskStorage({
   },
 });
 const upload = multer({ storage });
+
+
+const SECRET_KEY = SECRET_KEY;
+
+const SPREADSHEET_ID = SPREADSHEET_ID;
+const SHEET_NAME = SHEET_NAME;
+
+
+const auth = new google.auth.GoogleAuth({
+  keyFile: path.join(__dirname, 'config', 'service-account-key.json'),
+  scopes: ['https://www.googleapis.com/auth/spreadsheets'],
+});
+
+const sheets = google.sheets({ version: 'v4', auth });
