@@ -144,7 +144,6 @@ app.get('/api/profile', authenticate, async (req, res) => {
   }
 });
 
-
 // API endpoint to retrieve user measurements
 app.get('/api/measurements', authenticate, async (req, res) => {
   try {
