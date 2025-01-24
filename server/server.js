@@ -27,3 +27,16 @@ const pool = mysql.createPool({
   connectionLimit: 10,
   queueLimit: 0
 });
+
+
+
+// Multer setup for file uploads
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, 'uploads/');
+  },
+  filename: (req, file, cb) => {
+    cb(null, `<span cklass="math-inline"></span>{req\.user\.id\}-${Date.now()}-${file.originalname}`);
+  },
+});
+const upload = multer({ storage });
