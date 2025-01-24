@@ -7,10 +7,23 @@ const path = require('path');
 const mysql = require('mysql2/promise');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const crypto = require('crypto');
-const nodemailer = require('nodemailer');
 const { Configuration, OpenAIApi } = require('openai');
 const multer = require('multer');
-// const authenticate = require('./middleware/authenticate');
-// const isSuperUser = require('./middleware/isSuperUser');
+const fs = require('fs');
 
+const app = express();
+const port = process.env.PORT || 5000;
+
+app.use(bodyParser.json());
+app.use(cors());
+
+
+const pool = mysql.createPool({
+  host: DATABASE_HOST,
+  user: DATABASE_USER,
+  database: DATABASE_NAME,
+  password: DATABASE_PASSWORD,
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0
+});
