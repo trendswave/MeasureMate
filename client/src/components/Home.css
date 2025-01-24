@@ -1,0 +1,74 @@
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+}
+
+.tabs {
+    display: flex;
+}
+
+.tab {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.auth-links {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.dropdown-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.dropdown-item {
+    padding: 10px 20px;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+    background: none;
+    border: none;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+}
+
+.card {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.home-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
