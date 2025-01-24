@@ -74,3 +74,38 @@ async function appendToGoogleSheet(data) {
   }
 }
 
+async function updateGoogleSheet(measurementId, data) {
+  const authClient = await auth.getClient();
+  const getRowsRequest = {
+    spreadsheetId: SPREADSHEET_ID,
+    range: `sheet1!A:Z`,
+    auth: authClient,
+  };
+
+ try {
+    const response = await sheets.spreadsheets.values.get(getRowsRequest);
+    const rows = response.data.values;
+    const rowIndex = rows.findIndex(row => row[0] === measurementId.toString());
+
+    if (rowIndex === -1) {
+      console.error('Measurement ID not found in Google Sheet');
+      return;
+    }  
+
+const updateRequest = {
+      spreadsheetId: SPREADSHEET_ID,
+      range: `sheet1!A${rowIndex + 1}:Z${rowIndex + 1}`,
+      valueInputOption: 'USER_ENTERED',
+      resource: {
+        values: [data],
+      },
+      auth: authClient,
+    };
+
+       await sheets.spreadsheets.values.update(updateRequest);
+    console.log('Data updated in Google Sheet');
+  } catch (error) {
+    console.error('Error updating data in Google Sheet:', error);
+  }
+}
+
